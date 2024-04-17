@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../App.css";
+import Movie from "../components/Movie";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -17,7 +18,8 @@ function Home() {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       getMovie();
-    }, 1000);
+    }, 200);
+    console.log(timeoutId);
   }, []);
 
   return (
@@ -28,10 +30,11 @@ function Home() {
         <div>
           {movies.map((movie) => {
             return (
-              <div key={movie.id}>
-                <h1>{movie.title}</h1>
-                <img src={movie.medium_cover_image} alt="Movie cover" />
-              </div>
+              <Movie
+                id={movie.id}
+                title={movie.title}
+                coverImg={movie.medium_cover_image}
+              />
             );
           })}
         </div>
