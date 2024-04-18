@@ -34,6 +34,7 @@ function Home() {
                 id={movie.id}
                 title={movie.title}
                 coverImg={movie.medium_cover_image}
+                key={movie.id}
               />
             );
           })}

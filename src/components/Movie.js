@@ -5,7 +5,7 @@ function Movie({ id, title, coverImg }) {
   return (
     <div>
       <h1>
-        <Link to={`/movie/:${id}`}>{title}</Link>
+        <Link to={`/movie/${id}`}>{title}</Link>
       </h1>
       <img src={coverImg} alt="Movie cover" />
     </div>
