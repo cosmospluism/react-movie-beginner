@@ -12,10 +12,12 @@ function Detail() {
   };
   useEffect(() => {
     getMovieDetail();
-  }, []);
+  });
   return (
     <div>
       <img src={movie.background_image} alt="bg cover" />
+      <h1>{movie.title}</h1>
+      <p>{movie.description_intro}</p>
     </div>
   );
 }
