@@ -30,7 +30,7 @@ function Home() {
       ) : (
         <div>
           <div className={styles.top_box}>
-            <h2>Brownie No.2</h2>
+            <h2>BroWnie No.2</h2>
             <nav>
               <ul className={styles.nav_box}>
                 <li>Home</li>
@@ -40,8 +40,10 @@ function Home() {
                 <li>Animation</li>
               </ul>
             </nav>
-            <input type="text" placeholder="Search for movies or TV shows" />
-            <button>Sign In</button>
+            <div className={styles.search_box}>
+              <input type="text" placeholder="Search for movies or TV shows" />
+              <button>Sign In</button>
+            </div>
           </div>
           <section>
             <div className={styles.nav_box}>
@@ -49,11 +51,11 @@ function Home() {
               <h4>Movies</h4>
               <h4>TV Shows</h4>
             </div>
+            <span className={styles.filter_text}>▼FILTERS</span>
             <ul className={styles.nav_box}>
-              <li>FILTERS</li>
-              <li>Release Year</li>
-              <li>Genres</li>
-              <li>Rating</li>
+              <li>Release Year ⌵</li>
+              <li>Genres ⌵</li>
+              <li>Rating ⌵</li>
             </ul>
           </section>
           <main>
@@ -69,7 +71,7 @@ function Home() {
             })}
           </main>
           <footer>
-            <span>© Brownie No.2 2024</span>
+            <span>© BroWnie No.2 2024</span>
           </footer>
         </div>
       )}
