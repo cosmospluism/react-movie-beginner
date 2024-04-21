@@ -1,23 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,500&display=swap");
 
-.top_box {
-  display: flex;
-  align-items: center;
-}
 .top_box h2 {
-  color: #9c7a4c;
+  color: white;
   /* text-shadow: 1px 1px 2px white; */
   font-size: 35px;
   font-family: Raleway;
   cursor: pointer;
 }
+.middle_box {
+  display: flex;
+  justify-content: space-between;
+}
+
 .top_box nav {
   width: 500px;
 }
+
+.nav_box {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+  list-style-type: none;
+}
+
 .top_box ul {
   color: #757575;
   justify-content: space-evenly;
 }
+
 .top_box ul li {
   cursor: pointer;
   transition: all 0.3s;
@@ -56,8 +66,8 @@
   background-color: #28496d;
 }
 
-.top_box .search_box {
-  margin-left: 120px;
+.search_box {
+  margin-right: 30px;
 }
 
 section {
@@ -77,12 +87,8 @@ section ul {
   font-size: 17px;
   color: #b9bdcc;
 }
-
-.nav_box {
-  display: flex;
-  flex-direction: row;
-  /* justify-content: space-evenly; */
-  list-style-type: none;
+section ul li {
+  margin-right: 30px;
 }
 
 .filter_text {
@@ -96,6 +102,7 @@ section ul {
 main {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  margin-top: 20px;
 }
 
 footer {

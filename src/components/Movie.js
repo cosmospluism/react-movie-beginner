@@ -1,13 +1,26 @@
 import PropTypes from "prop-types";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import styles from "./Movie.module.css";
 
-function Movie({ id, title, coverImg }) {
+function Movie({ id, title, coverImg, year, runningtime, genre }) {
   return (
-    <div>
-      {/* <h1>
-        <Link to={`/movie/${id}`}>{title}</Link>
-      </h1> */}
+    <div className={styles.big_box}>
       <img src={coverImg} alt="Movie cover" />
+      <h4>
+        <Link to={`/movie/${id}`} className={styles.link}>
+          {title}
+        </Link>
+      </h4>
+      <div className={styles.middle_box}>
+        <div className={styles.small_box}>
+          <h5>{year}</h5>
+          <span>・</span>
+          <h5>{runningtime}m</h5>
+        </div>
+        <h5 className={styles.genre}>
+          {genre[Math.floor(Math.random(genre) * genre.length)]}
+        </h5>
+      </div>
     </div>
   );
 }

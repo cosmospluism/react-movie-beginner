@@ -9,7 +9,7 @@ function Home() {
   const getMovie = async () => {
     const json = await (
       await fetch(
-        "https://yts.mx/api/v2/list_movies.json?minimum_rating=8.5&sort_by=year"
+        "https://yts.mx/api/v2/list_movies.json?minimum_rating=6.5&sort_by=year"
       )
     ).json();
     setMovies(json.data.movies);
@@ -31,18 +31,23 @@ function Home() {
         <div>
           <div className={styles.top_box}>
             <h2>BroWnie No.2</h2>
-            <nav>
-              <ul className={styles.nav_box}>
-                <li>Home</li>
-                <li>New</li>
-                <li>Popular</li>
-                <li>Lists</li>
-                <li>Animation</li>
-              </ul>
-            </nav>
-            <div className={styles.search_box}>
-              <input type="text" placeholder="Search for movies or TV shows" />
-              <button>Sign In</button>
+            <div className={styles.middle_box}>
+              <nav>
+                <ul className={styles.nav_box}>
+                  <li>Home</li>
+                  <li>New</li>
+                  <li>Popular</li>
+                  <li>Lists</li>
+                  <li>Animation</li>
+                </ul>
+              </nav>
+              <div className={styles.search_box}>
+                <input
+                  type="text"
+                  placeholder="Search for movies or TV shows"
+                />
+                <button>Sign In</button>
+              </div>
             </div>
           </div>
           <section>
@@ -66,6 +71,9 @@ function Home() {
                   title={movie.title}
                   coverImg={movie.medium_cover_image}
                   key={movie.id}
+                  year={movie.year}
+                  runningtime={movie.runtime}
+                  genre={movie.genres}
                 />
               );
             })}
