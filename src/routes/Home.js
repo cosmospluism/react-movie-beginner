@@ -56,7 +56,6 @@ function Home() {
               <h4>Movies</h4>
               <h4>TV Shows</h4>
             </div>
-            <span className={styles.filter_text}>▼FILTERS</span>
             <ul className={styles.nav_box}>
               <li>Release Year ⌵</li>
               <li>Genres ⌵</li>
