@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,500&display=swap");
+
+div {
+  font-family: Raleway;
+}
+
+.bg_img {
+  width: 100%;
+  position: relative;
+}
+.middle_box {
+  display: flex;
+  margin: 0px 50px;
+  width: 1180px;
+  background-color: rgba(200, 200, 300, 0.2);
+  position: absolute;
+  bottom: 100px;
+}
+.middle_box img {
+  width: 280px;
+  height: 280px;
+  border-radius: 0;
+  margin-right: 40px;
+}
+.small_box {
+  display: flex;
+  font-size: 20px;
+  margin: 25px 0px;
+}
+.small_box h4 {
+  margin: 0;
+  margin-right: 30px;
+}
+p {
+  color: rgb(151, 159, 167);
+}
+
+.middle_box .choco_img {
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.bottom_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0px;
+  background-color: lightslategray;
+}
