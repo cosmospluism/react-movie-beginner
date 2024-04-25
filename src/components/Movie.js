@@ -5,7 +5,9 @@ import styles from "./Movie.module.css";
 function Movie({ id, title, coverImg, year, runningtime, genre }) {
   return (
     <div className={styles.big_box}>
-      <img src={coverImg} alt="Movie cover" />
+      <Link to={`/movie/${id}`}>
+        <img src={coverImg} alt="Movie cover" />
+      </Link>
       <h4>
         <Link to={`/movie/${id}`} className={styles.link}>
           {title}

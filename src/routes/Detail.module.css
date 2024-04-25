@@ -4,17 +4,30 @@ div {
   font-family: Raleway;
 }
 
+h2 {
+  color: white;
+  font-size: 35px;
+}
+
 .bg_img {
-  width: 100%;
   position: relative;
+  width: 100%;
+  border-radius: 0;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 50%,
+    transparent 100%
+  );
 }
 .middle_box {
-  display: flex;
-  margin: 0px 50px;
-  width: 1180px;
-  background-color: rgba(200, 200, 300, 0.2);
   position: absolute;
+  display: flex;
   bottom: 100px;
+  margin: 0px 50px;
+  padding: 20px;
+  width: 1150px;
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  /* border-radius: 10px; */
 }
 .middle_box img {
   width: 280px;
@@ -22,6 +35,21 @@ div {
   border-radius: 0;
   margin-right: 40px;
 }
+button {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 15px;
+  background-color: rgb(255, 187, 0);
+  border: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button:hover {
+  background-color: rgb(198, 127, 34);
+}
+
 .small_box {
   display: flex;
   font-size: 20px;
@@ -32,14 +60,15 @@ div {
   margin-right: 30px;
 }
 p {
-  color: rgb(151, 159, 167);
+  color: rgb(149, 148, 148);
+  padding-right: 20px;
 }
 
 .middle_box .choco_img {
   width: 35px;
   height: 35px;
   margin: 0;
-  margin-right: 10px;
+  margin-right: 14px;
 }
 
 .bottom_box {
