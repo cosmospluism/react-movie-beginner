@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-movie-beginner/static/css/main.0d2dd871.css",
+    "main.js": "/react-movie-beginner/static/js/main.754dbe58.js",
+    "static/media/C.png": "/react-movie-beginner/static/media/C.13c7bfc46b8ec703fa47.png",
+    "index.html": "/react-movie-beginner/index.html",
+    "main.0d2dd871.css.map": "/react-movie-beginner/static/css/main.0d2dd871.css.map",
+    "main.754dbe58.js.map": "/react-movie-beginner/static/js/main.754dbe58.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d2dd871.css",
+    "static/js/main.754dbe58.js"
+  ]
+}
