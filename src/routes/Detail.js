@@ -16,12 +16,17 @@ function Detail() {
   useEffect(() => {
     getMovieDetail();
   });
+
   return (
     <div>
-      <div>
+      <div className={styles.top_box}>
         <Link to={"/"} style={{ textDecoration: "none" }}>
           <h2>BroWnie No.2</h2>
         </Link>
+        <div className={styles.search_box}>
+          <input type="text" placeholder="Search for movies or TV shows" />
+          <button>Sign In</button>
+        </div>
       </div>
       <div>
         <img
@@ -45,9 +50,9 @@ function Detail() {
             </div>
           </div>
         </div>
-        <div className={styles.bottom_box}>
-          <h2>to be continued....</h2>
-        </div>
+        <footer>
+          <span>© BroWnie No.2 2024</span>
+        </footer>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import "../App.css";
 import Movie from "../components/Movie";
+import Loader from "./Loader";
 import styles from "./Home.module.css";
 
 function Home() {
@@ -9,7 +9,7 @@ function Home() {
   const getMovie = async () => {
     const json = await (
       await fetch(
-        "https://yts.mx/api/v2/list_movies.json?minimum_rating=7.0&sort_by=year"
+        "https://yts.mx/api/v2/list_movies.json?minimum_rating=7.4&sort_by=year"
       )
     ).json();
     setMovies(json.data.movies);
@@ -19,14 +19,14 @@ function Home() {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       getMovie();
-    }, 200);
-    console.log(timeoutId);
+    }, 400);
+    console.log("timeoutId: " + timeoutId);
   }, []);
 
   return (
     <div>
       {loading ? (
-        <h3>Loading...</h3>
+        <Loader />
       ) : (
         <div>
           <div className={styles.top_box}>
