@@ -19,7 +19,7 @@ function Home() {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       getMovie();
-    }, 400);
+    }, 300);
     console.log("timeoutId: " + timeoutId);
   }, []);
 

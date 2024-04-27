@@ -17,6 +17,9 @@ function Detail() {
     getMovieDetail();
   });
 
+  let movieBgImg = movie.background_image;
+  const movieDescription = movie.description_intro;
+
   return (
     <div>
       <div className={styles.top_box}>
@@ -29,11 +32,7 @@ function Detail() {
         </div>
       </div>
       <div>
-        <img
-          className={styles.bg_img}
-          src={movie.background_image}
-          alt="bg cover"
-        />
+        <img className={styles.bg_img} src={movieBgImg} alt="bg cover" />
         <div className={styles.middle_box}>
           <img src={movie.medium_cover_image} alt="small cover" />
           <div>
@@ -44,7 +43,13 @@ function Detail() {
               <h4>{movie.runtime} min</h4>
               <h4>{movie.rating} / 10</h4>
             </div>
-            <p>{movie.description_intro}</p>
+            <p>
+              {movieDescription
+                ? movieDescription.length > 430
+                  ? `${movieDescription.slice(0, 430)}...`
+                  : movieDescription
+                : "There's no description"}
+            </p>
             <div>
               <button>▶︎ Watch now</button>
             </div>
