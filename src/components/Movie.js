@@ -6,7 +6,7 @@ function Movie({ id, title, coverImg, year, runningtime, genre }) {
   return (
     <div className={styles.big_box}>
       <Link to={`/movie/${id}`}>
-        <img src={coverImg} alt="Movie cover" />
+        <img src={coverImg} alt="Movie cover" className={styles.movie_cover} />
       </Link>
       <h4>
         <Link to={`/movie/${id}`} className={styles.link}>

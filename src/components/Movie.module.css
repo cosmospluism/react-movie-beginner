@@ -6,10 +6,15 @@
   font-family: Lato;
 }
 
-img {
+.movie_cover {
   border-radius: 7px;
   margin-bottom: 7px;
   cursor: pointer;
+  transition: all 0.3s;
+}
+.movie_cover:active,
+.movie_cover:hover {
+  opacity: 0.5;
 }
 
 .big_box h4 {
