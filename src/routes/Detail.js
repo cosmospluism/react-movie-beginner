@@ -23,7 +23,10 @@ function Detail() {
   return (
     <div>
       <div className={styles.top_box}>
-        <Link to={"/"} style={{ textDecoration: "none" }}>
+        <Link
+          to={`${process.env.PUBLIC_URL}/`}
+          style={{ textDecoration: "none" }}
+        >
           <h2>BroWnie No.2</h2>
         </Link>
         <div className={styles.search_box}>

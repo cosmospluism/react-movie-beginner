@@ -5,11 +5,14 @@ import styles from "./Movie.module.css";
 function Movie({ id, title, coverImg, year, runningtime, genre }) {
   return (
     <div className={styles.big_box}>
-      <Link to={`/movie/${id}`}>
+      <Link to={`${process.env.PUBLIC_URL}/movie/${id}`}>
         <img src={coverImg} alt="Movie cover" className={styles.movie_cover} />
       </Link>
       <h4>
-        <Link to={`/movie/${id}`} className={styles.link}>
+        <Link
+          to={`${process.env.PUBLIC_URL}/movie/${id}`}
+          className={styles.link}
+        >
           {title}
         </Link>
       </h4>
